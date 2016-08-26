@@ -7,8 +7,8 @@
 
 using namespace std;
 
-int main() {
-
+int main() 
+{
 	char choice = NULL;							
 	string message;
 	string codeword = "";								//can't check an unitialised string
@@ -16,7 +16,6 @@ int main() {
 	int key = 0;
 	ofstream outFile;
 	ifstream inFile;
-
 
 	cout << endl << "Welcome to Codebreaker 3000, a 'Sate of the art' 32 bit encrypter.\n";
 
@@ -85,13 +84,11 @@ int main() {
 
 				cout << "\nAll done...\n";
 			}
-
 			else if (choice == 'n')
 			{
 				cout << "Okay, nothing was saved." << endl << endl;
 				system("pause");
 			}
-
 			else
 			{
 				cout << "Sorry, you entered something else." << endl << endl;
@@ -99,7 +96,6 @@ int main() {
 			}
 
 		}
-
 		else if (choice == 'd')
 		{
 			cout << "\nYou have chosen Decryption. \n\nDecrypt from the codebreaker file Y/N ? ";
@@ -114,7 +110,6 @@ int main() {
 			}
 			else if (choice == 'n')
 			{
-
 				cout << "\nPlease enter the message to decrypt: ";
 
 				cin.ignore();									//clears cin buffer
@@ -122,7 +117,7 @@ int main() {
 			}
 
 			cout << "\nPlease enter your decryption codeword: ";
-
+			
 			cin >> codeword;
 
 			for (int i = 0; i < codeword.length(); i++)			//iterates through elements of string
@@ -144,8 +139,8 @@ int main() {
 				{
 					message[i] += 95;							//adds 95 to value at current index of message string, then reassigns same index
 				}
-
 			}
+
 			cout << "\nYour decrypted message (between the << >>) is:\n\n<<" << message << ">>\n\n";
 			cout << "Would you like to save the decrypted message to file Y/N ? ";
 			cin >> choice;
