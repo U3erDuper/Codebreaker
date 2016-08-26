@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
-#include <fstream>								//required for file IO
+#include <fstream>										//required for file IO
+
+//Jean Toole, 28147790 - FIT1048 Assignment 1, Part 1
 
 
 using namespace std;
